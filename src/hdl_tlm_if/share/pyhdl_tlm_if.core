@@ -1,0 +1,19 @@
+CAPI=2:
+
+name: pyhdl-if::tlm
+
+filesets:
+  hvl:
+    files:
+    - "tlm_hvl2hdl_fifo.sv":
+        include_path: "."
+    - "tlm_hdl2hvl_fifo.sv":
+        include_path: "."
+    file_type: verilogSource
+    depend:
+      - pyhdl-if::call
+
+targets:
+  default:
+    filesets:
+      - hvl

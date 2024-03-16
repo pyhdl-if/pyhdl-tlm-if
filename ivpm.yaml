@@ -1,0 +1,47 @@
+
+package:
+  name: pyhdl-call-if
+
+  #  setup-deps:
+  #- ninja
+  #- cython
+
+  dep-sets:
+
+  - name: default
+    deps:
+    - name: pytest
+      src: pypi
+    - name: fusesoc
+      src: pypi
+
+  - name: default-dev
+    deps:
+    - name: pytest
+      src: pypi
+    - name: pyhdl-call-if
+      url: https://github.com/pyhdl-if/pyhdl-call-if.git
+    - name: pyvsc-dataclasses
+      url: https://github.com/vsc-tools/pyvsc-dataclasses.git
+    - name: pytest-fv
+      url: https://github.com/fvutils/pytest-fv.git
+    - name: uvmf-core
+      url: https://github.com/fvutils/uvmf-core.git
+    - name: fusesoc
+      url: https://github.com/olofk/fusesoc.git
+    - name: voluptuous
+      src: pypi
+    - name: jinja2
+      src: pypi
+    - name: ivpm
+      url: https://github.com/fvutils/ivpm.git
+
+  paths:
+    project:
+      lib-dirs:
+      - src/hdl_tlm_if/share
+
+
+
+
+
